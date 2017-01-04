@@ -1,0 +1,77 @@
+<%= form_for(reserf) do |f| %>
+  <% if reserf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reserf.errors.count, "error") %> prohibited this reserf from being saved:</h2>
+
+      <ul>
+      <% reserf.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event %>
+    <%= f.text_field :event %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :kana %>
+    <%= f.text_field :kana %>
+  </div>
+
+  <div class="field">
+    <%= f.label :child_name %>
+    <%= f.text_field :child_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :child_kana %>
+    <%= f.text_field :child_kana %>
+  </div>
+
+  <div class="field">
+    <%= f.label :child_age %>
+    <%= f.number_field :child_age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tel %>
+    <%= f.text_field :tel %>
+  </div>
+
+  <div class="field">
+    <%= f.label :reserve_period %>
+    <%= f.text_field :reserve_period %>
+  </div>
+
+  <div class="field">
+    <%= f.label :beginner %>
+    <%= f.check_box :beginner %>
+  </div>
+
+  <div class="field">
+    <%= f.label :qa %>
+    <%= f.text_field :qa %>
+  </div>
+
+  <div class="field">
+    <%= f.label :remarks %>
+    <%= f.text_area :remarks %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+json.extract! reserf, :id, :event, :name, :kana, :child_name, :child_kana, :child_age, :email, :tel, :reserve_period, :beginner, :qa, :remarks, :created_at, :updated_at
+json.url reserf_url(reserf, format: :json)

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event: MyString
+  name: MyString
+  kana: MyString
+  child_name: MyString
+  child_kana: MyString
+  child_age: 1
+  email: MyString
+  tel: MyString
+  reserve_period: MyString
+  beginner: false
+  qa: MyString
+  remarks: MyText
+
+two:
+  event: MyString
+  name: MyString
+  kana: MyString
+  child_name: MyString
+  child_kana: MyString
+  child_age: 1
+  email: MyString
+  tel: MyString
+  reserve_period: MyString
+  beginner: false
+  qa: MyString
+  remarks: MyText

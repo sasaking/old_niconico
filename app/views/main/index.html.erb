@@ -28,7 +28,11 @@
       <!--<div class="navbar navbar-fixed-top" role="navigation">-->
       <div class="container">
         <div class="sitename">
-          <div class="center-block"><a href="index.html"><img src="image/Title.jpg" alt="niconico"></a></div>
+          <div class="center-block">
+            <a href="/">
+              <%= image_tag("Title.jpg", alt: "niconico") %>
+            </a>
+          </div>
         </div>
 
         <!-- navbar header -->
@@ -50,11 +54,31 @@
         <!-- navbar body -->
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="suhedule.html"><img src="image/Suhedule.jpg" alt="niconico スケジュール"></a></li>
-            <li><a href="event.html"><img src="image/Event.jpg" alt="niconico イベント"></a></li>
-            <li><a href="creater.html"><img src="image/Creater.jpg" alt="niconico 講師情報"></a></li>
-            <li><a href="art.html"><img src="image/Art.jpg" alt="niconico 作品一覧"></a></li>
-            <li><a href="reserve.html"><img src="image/Reserve.jpg" alt="niconico 予約"></a></li>
+            <li>
+              <a href="/main/schedule">
+                <%= image_tag("Schedule.jpg", alt: "niconico スケジュール") %>
+              </a>
+            </li>
+            <li>
+              <a href="/main/event">
+                <%= image_tag("Event.jpg", alt: "niconico イベント") %>
+              </a>
+            </li>
+            <li>
+              <a href="/main/creater">
+                <%= image_tag("Creater.jpg", alt: "niconico 講師情報") %>
+              </a>
+            </li>
+            <li>
+              <a href="/main/art">
+                <%= image_tag("Art.jpg", alt: "niconico 作品一覧") %>
+              </a>
+            </li>
+            <li>
+              <a href="/reserves">
+                <%= image_tag("Reserve.jpg", alt: "niconico 予約") %>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -72,13 +96,13 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class='img-thumbnail' src="image/photo1.jpg" alt="photo1" style="width:100%;">
+          <%= image_tag("photo1.jpg", class: "img-thumbnail", alt: "photo1", style: "width:100%;")%>
         </div>
         <div class="item">
-            <img class='img-thumbnail' src="image/photo2.jpg" alt="photo2" style="width:100%;">
+          <%= image_tag("photo2.jpg", class: "img-thumbnail" , alt: "photo2", style: "width:100%;") %>
         </div>
         <div class="item">
-          <img class='img-thumbnail' src="image/photo3.jpg" alt="photo3" style="width:100%;">
+          <%= image_tag("photo3.jpg", class: "img-thumbnail" , alt: "photo3", style: "width:100%;") %>
         </div>
       </div>
 
@@ -107,11 +131,13 @@
     <div class="section">
       <div class="container">
         <div class="row">
-          <img src="image/menu.jpg" alt="menu" style="text-aling:center; width:100%; margin:10px 0 20px 0;">
+          <%= image_tag("Menu.jpg", alt: "Menu", style: "text-aling:center; width:100%; margin:10px 0 20px 0;") %>
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="col_box clearfix">
               <div class="col-xs-6 col-sm-12">
-                <a href="#"><img src="image/test.jpg" alt="撮影会情報" class="img-responsive" style="width:100%; margin:10px auto;"/></a>
+                <a href="#">
+                  <%= image_tag("test", alt: "撮影会情報", class: "img-responsive", style: "width:100%; margin:10px auto;") %>
+                </a>
               </div>
               <div class="col-xs-6 col-sm-12" style="text-align:center;">
                 撮影会情報
@@ -121,7 +147,9 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="col_box clearfix">
               <div class="col-xs-6 col-sm-12">
-                <a href="#"><img src="image/test.jpg" alt="講師情報" class="img-responsive" style="width:100%; margin:10px auto;"/></a>
+                <a href="#">
+                  <%= image_tag("test", alt: "講師情報", class: "img-responsive", style: "width:100%; margin:10px auto;") %>
+                </a>
               </div>
               <div class="col-xs-6 col-sm-12" style="text-align:center;">
                 講師情報
@@ -131,7 +159,9 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="col_box clearfix">
               <div class="col-xs-6 col-sm-12">
-                <a href="#"><img src="image/test.jpg" alt="アート作品" class="img-responsive" style="width:100%; margin:10px auto;"/></a>
+                <a href="#">
+                  <%= image_tag("test", alt: "アート作品", class: "img-responsive", style: "width:100%; margin:10px auto;") %>
+                </a>
               </div>
               <div class="col-xs-6 col-sm-12" style="text-align:center;">
                 アート情報
@@ -141,7 +171,9 @@
           <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="col_box clearfix">
               <div class="col-xs-6 col-sm-12">
-                <a href="#"><img src="image/test.jpg" alt="撮影会予約" class="img-responsive" style="width:100%; margin:10px auto;"/></a>
+                <a href="#">
+                  <%= image_tag("test", alt: "撮影会予約", class: "img-responsive", style: "width:100%; margin:10px auto;") %>
+                </a>
               </div>
               <div class="col-xs-6 col-sm-12" style="text-align:center;">
                 撮影会予約
@@ -155,57 +187,6 @@
 
 
 
-test</br>
-
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-tiest</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
-test</br>
 test</br>
 test</br>
 test</br>

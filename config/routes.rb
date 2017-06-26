@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   get 'main/art'
 
-  get 'main/reserves'
+  get 'main/reserve'
 
-  resources :reserves
+  resources :reserve
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -21,9 +21,7 @@
         <!-- navbar Title -->
         <div class="sitename">
           <div class="center-block">
-            <a href="/">
-              <%= image_tag("Title.jpg", alt: "niconico") %>
-            </a>
+            <%= link_to image_tag("Title.jpg", alt: "niconico"), root_path %>
           </div>
         </div>
 
@@ -41,30 +39,19 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li>
-              <a href="/main/schedule">
-                <%= image_tag("Schedule.jpg", alt: "niconico スケジュール") %>
-              </a>
+              <%= link_to image_tag("Schedule.jpg", alt: "niconico スケジュール"), schedule_path %>
             </li>
             <li>
-              <a href="/main/event">
-                <%= image_tag("Event.jpg", alt: "niconico イベント") %>
-              </a>
+              <%= link_to image_tag("Event.jpg", alt: "niconico イベント"), event_path %>
             </li>
             <li>
-              <a href="/main/creater">
-            <%= image_tag("Creater.jpg", alt: "niconico 講師情報") %>
-              </a>
+              <%= link_to image_tag("Creater.jpg", alt: "niconico 講師情報"), creater_path %>
             </li>
             <li>
-              <a href="/main/art">
-                <%= image_tag("Art.jpg", alt: "niconico 作品一覧") %>
-              </a>
+              <%= link_to image_tag("Art.jpg", alt: "niconico 作品一覧"), art_path %>
             </li>
             <li>
-
-              <a href="/main/reserve">
-                <%= image_tag("Reserve.jpg", alt: "niconico 予約") %>
-              </a>
+              <%= link_to image_tag("Reserve.jpg", alt: "niconico 予約"), reserve_path %>
             </li>
           </ul>
         </div>

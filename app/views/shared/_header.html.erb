@@ -1,72 +1,42 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>niconico お昼寝アート <%= title %></title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Costom styles for this template -->
-    <link href="css/myCostomNav.css" rel="stylesheet">
-    <link href="css/jquery.bxslider.css" type="text/css" rel="stylesheet">
-    <!-- CSS Reset -->
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-  </head>
-  <body>
+<div class="navbar navbar-default">
+  <div class="container">
 
-    <div class="navbar navbar-default">
-      <div class="container">
-
-        <!-- navbar Title -->
-        <div class="sitename">
-          <div class="center-block">
-            <a href="/">
-              <%= image_tag("Title.jpg", alt: "niconico") %>
-            </a>
-          </div>
-        </div>
-
-        <!-- navbar header -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nabvar-collapse">
-            <span class ="sr-only">Toggle navigation</span>
-            <span class ="icon-bar"></span>
-            <span class ="icon-bar"></span>
-            <span class ="icon-bar"></span>
-          </button>
-        </div>
-
-        <!-- navbar body -->
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="/main/schedule">
-                <%= image_tag("Schedule.jpg", alt: "niconico スケジュール") %>
-              </a>
-            </li>
-            <li>
-              <a href="/main/event">
-                <%= image_tag("Event.jpg", alt: "niconico イベント") %>
-              </a>
-            </li>
-            <li>
-              <a href="/main/creater">
-            <%= image_tag("Creater.jpg", alt: "niconico 講師情報") %>
-              </a>
-            </li>
-            <li>
-              <a href="/main/art">
-                <%= image_tag("Art.jpg", alt: "niconico 作品一覧") %>
-              </a>
-            </li>
-            <li>
-
-              <a href="/main/reserve">
-                <%= image_tag("Reserve.jpg", alt: "niconico 予約") %>
-              </a>
-            </li>
-          </ul>
-        </div>
+    <!-- navbar Title -->
+    <div class="sitename">
+      <div class="center-block">
+        <%= link_to image_tag("Title.jpg", alt: "niconico"), root_path %>
       </div>
     </div>
+
+    <!-- navbar header -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nabvar-collapse">
+        <span class ="sr-only">Toggle navigation</span>
+        <span class ="icon-bar"></span>
+        <span class ="icon-bar"></span>
+        <span class ="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- navbar body -->
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <%= link_to image_tag("Schedule.jpg", alt: "niconico スケジュール"), schedule_path %>
+        </li>
+        <li>
+          <%= link_to image_tag("Event.jpg", alt: "niconico イベント"), event_path %>
+        </li>
+        <li>
+          <%= link_to image_tag("Creater.jpg", alt: "niconico 講師情報"), creater_path %>
+        </li>
+        <li>
+          <%= link_to image_tag("Art.jpg", alt: "niconico 作品一覧"), art_path %>
+        </li>
+        <li>
+          <%= link_to image_tag("Reserve.jpg", alt: "niconico 予約"), reserve_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

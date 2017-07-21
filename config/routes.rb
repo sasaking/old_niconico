@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
   root 'main#index' 
-  get 'main/index'
+  get 'index', to: 'main#index'
 
-  get 'main/schedule'
+  get 'schedule', to: 'main#schedule'
 
-  get 'main/event'
+  get 'event', to: 'main#event'
 
-  get 'main/creater'
+  get 'creater', to: 'main#creater'
 
-  get 'main/art'
+  get 'art', to: 'main#art'
 
-  get 'main/reserve'
+  get 'reserve', to: 'main#reserve'
 
   resources :reserve
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

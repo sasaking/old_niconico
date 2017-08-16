@@ -9,6 +9,9 @@
 
     <div class ="form-horizontal">
 
+        <%= form_for @reserve, :url => {:action => 'confirm'} do |f| %>
+        <%= f.text_field :name, placeholder: '名前を入力してください。' , class: 'form-control' %>
+      <% end %>
       <form method="post" action="">
 
         <!-- イベントリスト選択フォーム -->

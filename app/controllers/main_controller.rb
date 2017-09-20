@@ -21,5 +21,9 @@ class MainController < ApplicationController
 
   def reserve
     @title = "予約"
+    @reserve = Reserve.new
+    #共通部分からの呼出し
+    @Questions = Constants::QUESTIONS
   end
+
 end

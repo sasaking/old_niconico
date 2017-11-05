@@ -20,18 +20,11 @@
     </div>
 
     <div class ="form-horizontal">
-<<<<<<< HEAD
-
-        <%= form_for @reserve, :url => {:action => 'confirm'} do |f| %>
-        <%= f.text_field :name, placeholder: '名前を入力してください。' , class: 'form-control' %>
-      <% end %>
       <form method="post" action="">
 
-        <!-- イベントリスト選択フォーム -->
-=======
-      <%= form_for @reserve, url: confirm_reserve_index_path do |f| %>
+      <!-- イベントリスト選択フォーム -->
+        <%= form_for @reserve, url: confirm_reserve_index_path do |f| %>
         <!-- 講座の一覧 -->
->>>>>>> editResurve
         <div class="form-group">
           <div class="col-xs-5 control-label">
             <%= f.label '講座選択' %>

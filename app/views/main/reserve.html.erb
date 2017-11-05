@@ -133,7 +133,7 @@
           </div>
           <div class="col-md-3 col-xs-6">
             <p class="form-control-static">今回の撮影会をどちらでお知りになりましたか？</p>
-            <% @CONST_QUESTION.each do |key, val| %>
+            <% @Questions.each do |key, val| %>
               <div class="checkbox">
                   <label><input type="checkbox" name="question[]" value=<%= key %> /><%= val %></label>
               </div>

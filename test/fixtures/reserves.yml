@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reserve_id: 1
+  event_id: 1
+  name: MyString
+  kana: MyString
+  child_name: MyString
+  child_kana: MyString
+  child_age: MyString
+  email: MyText
+  tel: MyString
+  reserve_period_id: 1
+  beginner_flg: 1
+  question_id: 1
+  remarks: MyText
+
+two:
+  reserve_id: 1
+  event_id: 1
+  name: MyString
+  kana: MyString
+  child_name: MyString
+  child_kana: MyString
+  child_age: MyString
+  email: MyText
+  tel: MyString
+  reserve_period_id: 1
+  beginner_flg: 1
+  question_id: 1
+  remarks: MyText

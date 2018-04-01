@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_id: MyString
+  event_place_id: MyString
+  event_date: 2018-04-01
+  event_start_time: 2018-04-01 12:42:19
+  event_end_time: 2018-04-01 12:42:19
+  event_title: MyString
+  event_content: MyText
+  event_fee: 1
+  art_id_1: MyString
+  art_id_2: MyString
+  remarks: MyText
+
+two:
+  event_id: MyString
+  event_place_id: MyString
+  event_date: 2018-04-01
+  event_start_time: 2018-04-01 12:42:19
+  event_end_time: 2018-04-01 12:42:19
+  event_title: MyString
+  event_content: MyText
+  event_fee: 1
+  art_id_1: MyString
+  art_id_2: MyString
+  remarks: MyText

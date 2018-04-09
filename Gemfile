@@ -39,6 +39,8 @@ gem 'nokogiri', '~> 1.6', '>= 1.6.7.rc3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'faker'
+  gem 'miyabi'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-stack_explorer'

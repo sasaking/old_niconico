@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'mastermente/index'
+  get 'mastermente/reserves'
   root 'main#index' 
   get 'index',    to: 'main#index'
   get 'schedule', to: 'main#schedule'
@@ -12,5 +14,6 @@ Rails.application.routes.draw do
       post 'confirm'
     end
   end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

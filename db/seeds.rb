@@ -8,7 +8,8 @@
 
 require 'faker'
 Faker::Config.locale = :ja
-@how_many_dummy = 30
+@how_many_dummy = 100
+@basedate = Date.today.strftime "%Y%m%d"
 # get all tables
 table_names = ActiveRecord::Base.connection.tables
 table_names.each do |t|

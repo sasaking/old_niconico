@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 #gem 'nokogiri'
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.rc3'
+gem 'kaminari', '~> 1.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MainPageTest < ActiveSupport::TestCase
+class ReservePeriodTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reserve_period_id: MyString
+  event_place_id: MyString
+  all_day_flg: MyString
+  reserve_start_time: 2018-04-01 12:43:10
+  reserve_end_time: 2018-04-01 12:43:10
+  reserve_limited_number: 1
+
+two:
+  reserve_period_id: MyString
+  event_place_id: MyString
+  all_day_flg: MyString
+  reserve_start_time: 2018-04-01 12:43:10
+  reserve_end_time: 2018-04-01 12:43:10
+  reserve_limited_number: 1

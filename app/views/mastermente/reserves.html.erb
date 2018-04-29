@@ -1,0 +1,31 @@
+<h1>Reserve list</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>予約番号</th>
+      <th>イベント番号</th>
+      <th>予約者名</th>
+      <th>お子様名</th>
+      <th>メールアドレス</th>
+      <th>電話番号</th>
+      <th>質問番号</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reserve_list.each do |reserve| %>
+      <tr>
+        <td><%= reserve.reserve_id %></td>
+        <td><%= reserve.event_id%></td>
+        <td><%= "#{reserve.name}(#{reserve.kana})" %></td>
+        <td><%= "#{reserve.child_name}(#{reserve.child_kana})" %></td>
+        <td><%= reserve.email %></td>
+        <td><%= reserve.tel%></td>
+        <td><%= reserve.question_id%></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <%= paginate @reserve_list %>
+
+</table>

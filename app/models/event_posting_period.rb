@@ -1,0 +1,2 @@
+class EventPostingPeriod < ApplicationRecord
+end

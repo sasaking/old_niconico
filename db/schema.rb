@@ -10,44 +10,90 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826062743) do
+ActiveRecord::Schema.define(version: 20180401034325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "events", force: :cascade do |t|
-    t.string   "title"
-    t.text     "content"
-    t.date     "date"
-    t.string   "plase"
-    t.integer  "price"
-    t.integer  "artid"
-    t.integer  "artid2"
-    t.text     "note"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "arts", force: :cascade do |t|
+    t.string   "art_id"
+    t.date     "effective_start"
+    t.date     "effective_end"
+    t.string   "art_name"
+    t.string   "art_type"
+    t.binary   "image_binary"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
-  create_table "main_pages", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "event_places", force: :cascade do |t|
+    t.string   "event_place_id"
+    t.string   "event_place_name"
+    t.string   "event_place_address"
+    t.string   "event_place_url"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "event_posting_periods", force: :cascade do |t|
+    t.string   "event_id"
+    t.date     "effective_start"
+    t.date     "effective_end"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "event_id"
+    t.string   "event_place_id"
+    t.date     "event_date"
+    t.time     "event_start_time"
+    t.time     "event_end_time"
+    t.string   "event_title"
+    t.text     "event_content"
+    t.integer  "event_fee"
+    t.string   "art_id_1"
+    t.string   "art_id_2"
+    t.text     "remarks"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "question_id"
+    t.string   "event_place_id"
+    t.text     "question_content"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "reserve_periods", force: :cascade do |t|
+    t.string   "reserve_period_id"
+    t.string   "event_place_id"
+    t.string   "all_day_flg"
+    t.time     "reserve_start_time"
+    t.time     "reserve_end_time"
+    t.integer  "reserve_limited_number"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "reserves", force: :cascade do |t|
-    t.integer  "event_id"
+    t.string   "reserve_id",        null: false
+    t.string   "event_id",          null: false
     t.string   "name"
     t.string   "kana"
-    t.string   "child_name"
-    t.string   "child_kana"
+    t.string   "child_name",        null: false
+    t.string   "child_kana",        null: false
     t.string   "child_age"
-    t.string   "email"
-    t.integer  "tel"
-    t.integer  "reserve_period"
-    t.integer  "beginner"
-    t.integer  "question_id"
+    t.text     "email",             null: false
+    t.string   "tel"
+    t.string   "reserve_period_id", null: false
+    t.integer  "beginner_flg"
+    t.string   "question_id",       null: false
     t.text     "remarks"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
 end

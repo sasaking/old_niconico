@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'mastermente/index'
   get 'mastermente/reserves'
+  get 'mastermente/events'
   root 'main#index' 
   get 'index',    to: 'main#index'
   get 'schedule', to: 'main#schedule'

@@ -2,7 +2,7 @@
   figure = format "%03d", n
   Event.create!(
     event_id: "ev#{@basedate}#{figure}",
-    event_place_id: "evp#{@basedate}#{figure}",
+    event_place_id: "ep#{@basedate}#{figure}",
     event_date: Date.today - 7 * n,
     event_start_time: Time.now,
     event_end_time: Time.now + (60 * 60 * 1),

@@ -16,7 +16,7 @@
     <% @event_list.each do |event| %>
       <tr>
         <td><%= event.event_id %></td>
-        <td><%= event.event_place.event_place_name %></td>
+        <td><%= event.reserve_period.event_place.event_place_name %></td>
         <td><%= event.event_date %></td>
         <td><%= "#{event.event_start_time.strftime("%H:%M")} - #{event.event_end_time.strftime("%H:%M")}" %></td>
         <td><%= event.event_title %></td>

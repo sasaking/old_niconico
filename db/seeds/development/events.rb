@@ -2,7 +2,7 @@
   figure = format "%03d", n
   Event.create!(
     event_id: "ev#{@basedate}#{figure}",
-    event_place_id: "ep#{@basedate}#{figure}",
+    reserve_period_id: "rp#{@basedate}#{figure}",
     event_date: Date.today - 7 * n,
     event_start_time: Time.now,
     event_end_time: Time.now + (60 * 60 * 1),
@@ -11,6 +11,8 @@
     event_fee: Faker::Number.number(4),
     art_id_1: "art#{@basedate}#{figure}",
     art_id_2: "",
-    remarks: Faker::Lorem.paragraphs(2).to_s
+    remarks: Faker::Lorem.paragraphs(2).to_s,
+    effective_start: DateTime.now,
+    effective_end: DateTime.now + 3
   )
 end

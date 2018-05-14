@@ -14,8 +14,10 @@
     tel: Faker::PhoneNumber.cell_phone,
     reserve_period_id: "rp#{@basedate}#{figure}",
     beginner_flg: n % 4 == 0 ? 1 : 0,
-    question_id: "qt#{@basedate}#{figure}",
-    remarks: Faker::Lorem.paragraphs(4)
+    #question_id: "qt#{@basedate}#{figure}",
+    remarks: Faker::Lorem.paragraphs(4),
+    answer: rand(1..5),
+    status: rand(0..2)
   )
 end
 

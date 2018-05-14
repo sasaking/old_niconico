@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180401034325) do
+ActiveRecord::Schema.define(version: 20180505054813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20180401034325) do
 
   create_table "events", force: :cascade do |t|
     t.string   "event_id"
-    t.string   "event_place_id"
     t.date     "event_date"
     t.time     "event_start_time"
     t.time     "event_end_time"
@@ -55,8 +54,11 @@ ActiveRecord::Schema.define(version: 20180401034325) do
     t.string   "art_id_1"
     t.string   "art_id_2"
     t.text     "remarks"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "reserve_period_id", null: false
+    t.time     "effective_start",   null: false
+    t.time     "effective_end",     null: false
   end
 
   create_table "questions", force: :cascade do |t|
@@ -90,10 +92,12 @@ ActiveRecord::Schema.define(version: 20180401034325) do
     t.string   "tel"
     t.string   "reserve_period_id", null: false
     t.integer  "beginner_flg"
-    t.string   "question_id",       null: false
     t.text     "remarks"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "answer",            null: false
+    t.text     "answer_content"
+    t.integer  "status",            null: false
   end
 
 end

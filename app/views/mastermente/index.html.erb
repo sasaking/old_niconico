@@ -1,2 +1,12 @@
 <h1>Mastermente#index</h1>
 <p>Find me in app/views/mastermente/index.html.erb</p>
+<% if user_signed_in? %>
+    Logged in as <strong><% current_user.email %></strong>
+    <%= link_to "Setting", edit_user_registration_path %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% end %>
+</br>
+
+
+<%= link_to 'イベント情報', mastermente_events_path %> | 
+<%= link_to '予約情報', mastermente_reserves_path %>

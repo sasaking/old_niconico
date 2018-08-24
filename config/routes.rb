@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'mastermente/index'
+  devise_for :users
+  get 'mastermente',  to: 'mastermente#index'
+  get 'mastermente/index',  to: 'mastermente#index'
   get 'mastermente/reserves'
   get 'mastermente/events'
   root 'main#index' 

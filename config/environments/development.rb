@@ -27,8 +27,6 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
@@ -41,7 +39,6 @@ Rails.application.configure do
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
-  # B
   # number of complex assets.
   config.assets.debug = true
 

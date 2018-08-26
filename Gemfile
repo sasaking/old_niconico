@@ -35,18 +35,16 @@ gem 'jbuilder', '~> 2.5'
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.rc3'
 gem 'kaminari', '~> 1.1'
 
-gem 'devise'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'faker'
+  gem 'miyabi'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-stack_explorer'
-  gem 'miyabi'
   gem 'pry-byebug'
   gem 'byebug', platform: :mri
 end

@@ -11,13 +11,14 @@ ActiveAdmin.register Reserve do
 #   permitted
 # end
 
-    # filterの項目設定
+    # 検索条件の項目設定
     filter :id
     filter :event_id
 
-    # Reserve一覧画面の表示項目設定
+    # 予約一覧画面の表示項目設定(日本語変換はmodel/ja.ymlで設定)
     index do
         column :event_id
+        column :created_at
         column :name
         column :kana
         column :child_name
@@ -25,7 +26,16 @@ ActiveAdmin.register Reserve do
         column :child_age
         column :tel
         column :email
-        column :beginner_flg
+
+        # 初回フラグ
+        column :beginner_flg do |reserve|
+          # 値から初回かを判定する
+          if reserve.beginner_flg == 1
+              "初回"
+          else
+              ""
+          end
+        end
 
         actions
     end

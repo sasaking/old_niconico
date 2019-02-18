@@ -1,0 +1,30 @@
+# vim config/locales/model/ja.yml
+ja:
+  activerecord:
+    # admin画面のMemuの日本語設定
+    models:
+      admin_user: 管理者
+      event_place: イベント会場一覧
+      event: イベント一覧
+      reserve_period: 会場別の予約時間一覧
+      reserve: 予約一覧
+    # 各画面の項目名
+    attributes:
+      # 管理者画面
+      admin_user:
+        email: メールアドレス
+        current_sign_in_at: 最新ログイン日時
+        sign_in_count: ログイン回数
+        created_at: 作成日時
+      # 予約(一覧・閲覧・編集)画面
+      reserve:
+        event_id: イベント名
+        name: 予約者名
+        kana: 予約者名(かな)
+        child_name: お子様
+        child_kana: お子様(かな)
+        child_age: 子供の月齢
+        tel: 電話番号
+        email: メールアドレス
+        beginner_flg: 初回参加
+        created_at: 予約日

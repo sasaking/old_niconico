@@ -12,4 +12,19 @@ ActiveAdmin.register EventPlace do
 #   permitted
 # end
 
+    #初期表示のソート指定なし
+
+    # 1ページの表示件数を20件とする
+    config.per_page = 20
+
+    # イベント会場一覧画面の表示項目設定(表示タイトル,表示カラム)
+    index do 
+        column "会場名" , :event_place_name
+        column "会場住所" , :event_place_address
+        column "会場URL" , :event_place_url
+        column "登録日" , :created_at
+
+        actions
+    end
+
 end

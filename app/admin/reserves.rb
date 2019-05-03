@@ -11,6 +11,11 @@ ActiveAdmin.register Reserve do
 #   permitted
 # end
 
+    # 初期表示を予約日の降順でソート
+    config.sort_order = 'created_at_desc'
+    # 1ページの表示件数を20件とする
+    config.per_page = 20
+
     # 検索条件の項目設定
     filter :id
     filter :event_id

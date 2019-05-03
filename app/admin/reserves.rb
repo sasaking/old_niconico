@@ -17,28 +17,42 @@ ActiveAdmin.register Reserve do
     config.per_page = 20
 
     # 検索条件の項目設定
-    filter :id
+    filter :status
     filter :event_id
 
     # 予約一覧画面の表示項目設定(日本語変換はmodel/ja.ymlで設定)
     index do
-        column :event_id
-        column :created_at
-        column :name
-        column :kana
-        column :child_name
-        column :child_kana
-        column :child_age
-        column :tel
-        column :email
+        column "イベント名", :event_id
+        column "予約日", :created_at
+        column "予約者", :name
+        column "予約者(カナ)", :kana
+        column "子供", :child_name
+        column "子供(カナ)", :child_kana
+        column "月齢", :child_age
+        column "電話番号", :tel
+        column "メール", :email
 
         # 初回フラグ
-        column :beginner_flg do |reserve|
-          # 値から初回かを判定する
+        column "ユーザ情報", :beginner_flg do |reserve|
+          # 初回ユーザ判定
           if reserve.beginner_flg == 1
               "初回"
           else
               ""
+          end
+        end
+
+        # 予約ステータス
+        column "予約状況", :status do |reserve|
+          # 予約したユーザがどのようなステータスかを判定する
+          if reserve.status == 0
+              "予約済"
+          elsif reserve.status = 1
+              "キャン待ち"
+          elsif reserve.status = 2
+              "予約キャンセル"
+          else
+              "終了"
           end
         end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180829105445) do
+ActiveRecord::Schema.define(version: 20190503051302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 20180829105445) do
   create_table "reserve_periods", force: :cascade do |t|
     t.string   "reserve_period_id"
     t.string   "event_place_id"
-    t.string   "all_day_flg"
+    t.integer  "all_day_flg"
     t.time     "reserve_start_time"
     t.time     "reserve_end_time"
     t.integer  "reserve_limited_number"

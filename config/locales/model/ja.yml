@@ -2,11 +2,12 @@
 ja:
   activerecord:
     # admin画面のMemuの日本語設定
+    # 各画面のタイトル
     models:
       admin_user: 管理者
       event_place: イベント会場一覧
       event: イベント一覧
-      reserve_period: 会場別の予約時間一覧
+      reserve_period: 会場毎の予約時間一覧
       reserve: 予約一覧
     # 各画面の項目名
     attributes:
@@ -28,3 +29,4 @@ ja:
         email: メールアドレス
         beginner_flg: 初回参加
         created_at: 予約日
+
